@@ -33,7 +33,7 @@ WHERE 2023 - year(date_of_birth) > 30;
 ```sql
 SELECT *
 FROM `courses`
-WHERE period = 'I semestre' && year = 1;
+WHERE period = 'I semestre' AND year = 1;
 ```
 
 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020
@@ -41,7 +41,7 @@ WHERE period = 'I semestre' && year = 1;
 ```sql
 SELECT *
 FROM `exams`
-WHERE hour > '14:%:%' && date = '2020-06-20';
+WHERE hour > '14:%:%' AND date = '2020-06-20';
 ```
 
 6.  Selezionare tutti i corsi di laurea magistrale
