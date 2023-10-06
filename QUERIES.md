@@ -3,13 +3,13 @@
 ```sql
 SELECT *
 FROM students
-WHERE date_of_birth LIKE "1990-%-%"
+WHERE date_of_birth LIKE "1990-%-%";
 ```
 
 ```sql
 SELECT *
 FROM students
-WHERE year(date_of_birth) = 1990
+WHERE year(date_of_birth) = 1990;
 ```
 
 2. Selezionare tutti i corsi che valgono più di 10 crediti (479)
@@ -17,7 +17,7 @@ WHERE year(date_of_birth) = 1990
 ```sql
 SELECT *
 FROM courses
-WHERE cfu > 10
+WHERE cfu > 10;
 ```
 
 3.  Selezionare tutti gli studenti che hanno più di 30 anni
@@ -25,7 +25,7 @@ WHERE cfu > 10
 ```sql
 SELECT *
 FROM students
-WHERE 2023 - year(date_of_birth) > 30
+WHERE 2023 - year(date_of_birth) > 30;
 ```
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
@@ -33,7 +33,7 @@ WHERE 2023 - year(date_of_birth) > 30
 ```sql
 SELECT *
 FROM `courses`
-WHERE period = 'I semestre' && year = 1
+WHERE period = 'I semestre' && year = 1;
 ```
 
 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020
@@ -41,7 +41,7 @@ WHERE period = 'I semestre' && year = 1
 ```sql
 SELECT *
 FROM `exams`
-WHERE hour > '14:%:%' && date = '2020-06-20'
+WHERE hour > '14:%:%' && date = '2020-06-20';
 ```
 
 6.  Selezionare tutti i corsi di laurea magistrale
@@ -49,14 +49,14 @@ WHERE hour > '14:%:%' && date = '2020-06-20'
 ```sql
 SELECT *
 FROM `degrees`
-WHERE level = 'magistrale'
+WHERE level = 'magistrale';
 ```
 
 7. Da quanti dipartimenti è composta l'università?
 
 ```sql
 SELECT COUNT(*)
-FROM departments
+FROM departments;
 ```
 
 8.  Quanti sono gli insegnanti che non hanno un numero di telefono?
@@ -64,5 +64,5 @@ FROM departments
 ```sql
 SELECT *
 FROM `teachers`
-WHERE phone is NULL
+WHERE phone is NULL;
 ```
