@@ -27,3 +27,11 @@ SELECT *
 FROM students
 WHERE 2023 - year(date_of_birth) > 30
 ```
+
+4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
+
+```sql
+SELECT *
+FROM `courses`
+WHERE period = 'I semestre' && year = 1
+```
