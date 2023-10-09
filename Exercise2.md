@@ -52,6 +52,15 @@ WHERE degrees.level = 'magistrale' AND departments.name = "Dipartimento di Neuro
 ```
 
 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+
+```sql
+/* Non sono sicuro sia corretto?*/
+SELECT courses.name
+FROM courses
+JOIN course_teacher ON course_teacher.course_id = id
+WHERE course_teacher.teacher_id = 44
+```
+
 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
 
 ```sql
