@@ -28,6 +28,13 @@ FROM students
 WHERE year(CURRENT_DATE) - year(date_of_birth) > 30;
 ```
 
+```sql
+--Metodo alternativo di Tiziano
+SELECT *
+FROM students
+WHERE TIMESTAMPDIFF(year, `date_of_birth`, CURDATE()) > 30;
+```
+
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
 
 ```sql
