@@ -29,7 +29,7 @@ WHERE year(CURRENT_DATE) - year(date_of_birth) > 30;
 ```
 
 ```sql
---Metodo alternativo di Tiziano
+--Correzione di Tiziano
 SELECT *
 FROM students
 WHERE TIMESTAMPDIFF(year, `date_of_birth`, CURDATE()) > 30;
@@ -85,6 +85,13 @@ FROM departments;
 
 ```sql
 SELECT *
+FROM `teachers`
+WHERE phone is NULL;
+```
+
+```sql
+--Correzione di Tiziano
+SELECT COUNT(*) as "insegnanti_senza_telefono"
 FROM `teachers`
 WHERE phone is NULL;
 ```
