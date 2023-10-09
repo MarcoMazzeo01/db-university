@@ -59,6 +59,13 @@ FROM `exams`
 WHERE hour > '14:%:%' AND date = '2020-06-20';
 ```
 
+```sql
+--Metodo alternativo di Tiziano
+SELECT *
+FROM `exams`
+WHERE date = '2020-06-20' AND HOUR(hour) >= 14;
+```
+
 6.  Selezionare tutti i corsi di laurea magistrale
 
 ```sql
