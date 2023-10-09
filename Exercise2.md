@@ -21,13 +21,15 @@ GROUP BY office_address;
 ```sql
 SELECT AVG(vote) as "media", exam_id as "appello"
 FROM exam_student
-GROUP BY appello
+GROUP BY appello;
 ```
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
 ```sql
-
+SELECT COUNT(id) as "Corsi di Laurea", department_id as "Dipartimento"
+FROM degrees
+GROUP BY Dipartimento;
 ```
 
 ## JOIN
