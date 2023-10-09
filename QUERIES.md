@@ -77,7 +77,7 @@ WHERE level = 'magistrale';
 7. Da quanti dipartimenti è composta l'università?
 
 ```sql
-SELECT COUNT(*)
+SELECT COUNT(*) as "numero_dipartimenti"
 FROM departments;
 ```
 
