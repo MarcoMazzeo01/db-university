@@ -3,7 +3,7 @@
 1. Contare quanti iscritti ci sono stati ogni anno
 
 ```sql
-SELECT COUNT(*), year(enrolment_date) AS "anno"
+SELECT COUNT(*) as 'iscritti', year(enrolment_date) AS "Anno"
 FROM students
 GROUP BY YEAR(enrolment_date);
 ```
@@ -11,7 +11,7 @@ GROUP BY YEAR(enrolment_date);
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
 ```sql
-SELECT COUNT(*), office_address as "Indirizzo"
+SELECT COUNT(*) as 'numero insegnanti', office_address as "Indirizzo"
 FROM teachers
 GROUP BY office_address;
 ```
